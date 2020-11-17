@@ -4,9 +4,14 @@ VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceLayer", "ServiceLayer\ServiceLayer.csproj", "{559E889D-B8D7-4B20-8D5C-2202960C9430}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{B49D3C81-213B-42DE-A6A0-282EE314B623}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "WebApp\WebApp.csproj", "{B49D3C81-213B-42DE-A6A0-282EE314B623}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsForms", "WindowsForms\WindowsForms.csproj", "{DD000F54-F0F1-44D9-AAA7-25EF7BB06901}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsForms", "WindowsForms\WindowsForms.csproj", "{DD000F54-F0F1-44D9-AAA7-25EF7BB06901}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{391C7CF5-0C07-43C9-93D4-EC5B7AE41793}"
+	ProjectSection(SolutionItems) = preProject
+		..\SQLQueryQuestion2.sql = ..\SQLQueryQuestion2.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
