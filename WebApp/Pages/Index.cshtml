@@ -1,0 +1,60 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Enter Alarm";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Enter Alarm</h1>
+</div>
+
+<div class="text-center">
+    <form id="frmAlarmMessage" method="post" enctype="multipart/form-data">
+        <h4> Description:</h4><br>
+        <input id="txtMessage" rows="2" cols="60" asp-for="Message" name="Message" /><br><br>
+        <input id="btnSubmit" type="submit" value="Submit" class="submit">
+    </form>
+</div>
+
+
+@if (Model.Result == true)
+{
+    <div class="resultArea">
+        @if (Model.AlarmParse.CorrectMessage)
+        {
+            <div class="correctResult">
+                <span>@Model.AlarmParse.ReturnMessage</span>
+                <br />
+                <span id="serverNumber">Server Number: @Model.AlarmParse.ServerNumber</span>
+                <br />
+                <span id="alarmId">Alarm ID: @Model.AlarmParse.AlarmId</span>
+            </div>
+        }
+        else
+        {
+            <div class="badResult">
+                <span>@Model.AlarmParse.ReturnMessage</span><br />
+
+                @if (Model.AlarmParse.ServerNumber.HasValue)
+                {
+                    <span id="serverNumber">Server Number: @Model.AlarmParse.ServerNumber</span>
+                }
+                else
+                {
+                    <span id="serverNumberNotFound">Server Number: Not Found</span>
+                }
+                <br />
+                @if (Model.AlarmParse.AlarmId.HasValue)
+                {
+                    <span id="alarmId">Alarm ID: @Model.AlarmParse.AlarmId</span>
+                }
+                else
+                {
+                    <span id="serverNumberNotFound">Alarm ID: Not Found</span>
+                }
+            </div>
+        }
+
+    </div>
+
+}
